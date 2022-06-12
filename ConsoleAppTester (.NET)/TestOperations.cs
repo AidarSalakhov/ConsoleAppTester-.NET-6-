@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ConsoleAppTester
+﻿namespace ConsoleAppTester__.NET_
 {
     internal class TestOperations
     {

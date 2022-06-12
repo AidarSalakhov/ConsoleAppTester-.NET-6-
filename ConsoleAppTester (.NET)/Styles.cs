@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleAppTester__.NET_
+﻿namespace ConsoleAppTester__.NET_
 {
-    internal class MessageColor
+    internal class Styles
     {
         public static void SetColor(string color, bool on)
         {

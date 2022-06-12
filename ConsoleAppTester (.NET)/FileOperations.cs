@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Newtonsoft.Json;
-using System.IO;
+﻿using Newtonsoft.Json;
 
-namespace ConsoleAppTester
+namespace ConsoleAppTester__.NET_
 {
     internal class FileOperations
     {

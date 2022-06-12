@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ConsoleAppTester
+﻿namespace ConsoleAppTester__.NET_
 {
     internal class TestOperations
     {
@@ -49,20 +46,26 @@ namespace ConsoleAppTester
             newTest.Clear();
             ShowMessage.Info(9);
             string testName = Console.ReadLine();
+            if (testName == "")
+            {
+                Console.Clear();
+                ShowMessage.Error(8);
+                CreateNewTest();
+            }
 
             ShowMessage.Info(10);
             if (!int.TryParse(Console.ReadLine(), out int testQuestionsCount))
             {
-                ShowMessage.Error(5);
                 Console.Clear();
+                ShowMessage.Error(5);
                 CreateNewTest();
             }
 
             ShowMessage.Info(11);
             if (!int.TryParse(Console.ReadLine(), out int questionAnswersCount) || questionAnswersCount < 2)
             {
-                ShowMessage.Error(6);
                 Console.Clear();
+                ShowMessage.Error(6);
                 CreateNewTest();
             }
 
@@ -72,6 +75,14 @@ namespace ConsoleAppTester
                 ShowMessage.Info(12, false);
                 Console.WriteLine(i + 1);
                 question.question = Console.ReadLine();
+
+                if (question.question == "")
+                {
+                    Console.Clear();
+                    ShowMessage.Error(8);
+                    CreateNewTest();
+                }
+
                 question.questionAnswers = new string[questionAnswersCount];
 
                 for (int j = 0; j < questionAnswersCount; j++)
@@ -79,12 +90,20 @@ namespace ConsoleAppTester
                     ShowMessage.Info(13, false);
                     Console.WriteLine(j + 1);
                     question.questionAnswers[j] = Console.ReadLine();
+
+                    if (question.questionAnswers[j] == "")
+                    {
+                        Console.Clear();
+                        ShowMessage.Error(8);
+                        CreateNewTest();
+                    }
                 }
 
                 ShowMessage.Info(14);
                 if (!int.TryParse(Console.ReadLine(), out question.questionRightAnswer) || question.questionRightAnswer > questionAnswersCount || question.questionRightAnswer < 1)
                 {
-                    ShowMessage.Error(7);
+                    Console.Clear();
+                    ShowMessage.Error(6);
                     CreateNewTest();
                 }
 

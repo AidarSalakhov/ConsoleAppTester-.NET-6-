@@ -1,4 +1,4 @@
-﻿namespace ConsoleAppTester
+﻿namespace ConsoleAppTester__.NET_
 {
     internal class Constants
     {

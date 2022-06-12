@@ -1,7 +1,6 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace ConsoleAppTester
+namespace ConsoleAppTester__.NET_
 {
     internal class Menu
     {

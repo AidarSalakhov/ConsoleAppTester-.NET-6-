@@ -2,9 +2,9 @@
 {
     internal class TestOperations
     {
-        public static List<TestContent.Question> newTest = new List<TestContent.Question>();
+        public static List<Question> newTest = new List<Question>();
 
-        public static TestContent.Question question = new TestContent.Question();
+        public static Question question = new Question();
 
         public static void StartTest()
         {

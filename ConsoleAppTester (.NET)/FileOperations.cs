@@ -18,18 +18,18 @@ namespace ConsoleAppTester__.NET_
             }
         }
 
-        public static List<TestContent.Question> LoadTest(string testName)
+        public static List<Question> LoadTest(string testName)
         {
             try
             {
                 string json = File.ReadAllText(testName + Constants.SaveFileExtension).ToString();
-                return TestOperations.newTest = JsonConvert.DeserializeObject<List<TestContent.Question>>(json);
+                return TestOperations.newTest = JsonConvert.DeserializeObject<List<Question>>(json);
             }
             catch (Exception)
             {
                 ShowMessage.Error(7);
                 Menu.ShowMenu();
-                return new List<TestContent.Question>();
+                return new List<Question>();
             }
         }
 

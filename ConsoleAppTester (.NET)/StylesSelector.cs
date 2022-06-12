@@ -1,6 +1,6 @@
 ﻿namespace ConsoleAppTester__.NET_
 {
-    internal class Styles
+    internal class StylesSelector
     {
         public static void SetColor(string color, bool on)
         {
@@ -18,6 +18,15 @@
                 Console.ForegroundColor = ConsoleColor.Red;
             }
             else if (color == "Red" & !on)
+            {
+                Console.ResetColor();
+            }
+
+            if (color == "Yellow" & on)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+            }
+            else if (color == "Yellow" & !on)
             {
                 Console.ResetColor();
             }

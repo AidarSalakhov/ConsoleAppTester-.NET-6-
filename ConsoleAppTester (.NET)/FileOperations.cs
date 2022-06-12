@@ -13,7 +13,7 @@ namespace ConsoleAppTester__.NET_
             }
             catch (Exception)
             {
-                ShowMessage.Error("ERROR_2_UNABLE_SAVE_TEST");
+                MessagesViewer.Error("ERROR_2_UNABLE_SAVE_TEST");
                 Menu.ShowMenu();
             }
         }
@@ -27,7 +27,7 @@ namespace ConsoleAppTester__.NET_
             }
             catch (Exception)
             {
-                ShowMessage.Error("ERROR_7_UNABLE_LOAD_TEST");
+                MessagesViewer.Error("ERROR_7_UNABLE_LOAD_TEST");
                 Menu.ShowMenu();
                 return new List<Question>();
             }
@@ -44,7 +44,7 @@ namespace ConsoleAppTester__.NET_
 
             if (TxtFiles.Count < 1)
             {
-                ShowMessage.Info("INFO_2_NO_AVIABLE_TESTS");
+                MessagesViewer.Info("INFO_2_NO_AVIABLE_TESTS");
                 Menu.ShowMenu();
             }
 

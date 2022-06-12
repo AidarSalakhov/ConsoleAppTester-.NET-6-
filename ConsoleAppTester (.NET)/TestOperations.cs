@@ -53,16 +53,16 @@ namespace ConsoleAppTester
             ShowMessage.Info(10);
             if (!int.TryParse(Console.ReadLine(), out int testQuestionsCount))
             {
-                ShowMessage.Error(5);
                 Console.Clear();
+                ShowMessage.Error(5);
                 CreateNewTest();
             }
 
             ShowMessage.Info(11);
             if (!int.TryParse(Console.ReadLine(), out int questionAnswersCount) || questionAnswersCount < 2)
             {
-                ShowMessage.Error(6);
                 Console.Clear();
+                ShowMessage.Error(6);
                 CreateNewTest();
             }
 
@@ -84,7 +84,8 @@ namespace ConsoleAppTester
                 ShowMessage.Info(14);
                 if (!int.TryParse(Console.ReadLine(), out question.questionRightAnswer) || question.questionRightAnswer > questionAnswersCount || question.questionRightAnswer < 1)
                 {
-                    ShowMessage.Error(7);
+                    Console.Clear();
+                    ShowMessage.Error(6);
                     CreateNewTest();
                 }
 

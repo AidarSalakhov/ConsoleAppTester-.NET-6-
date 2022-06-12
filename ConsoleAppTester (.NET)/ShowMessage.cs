@@ -6,6 +6,7 @@ namespace ConsoleAppTester
     {
         public static void Error(int code, bool line = true)
         {
+            
             if (line)
             {
                 Console.WriteLine(Messages.errors[code]);

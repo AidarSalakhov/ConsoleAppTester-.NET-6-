@@ -13,23 +13,23 @@ namespace ConsoleAppTester__.NET_
             }
             catch (Exception)
             {
-                ShowMessage.Error(3);
+                MessagesViewer.Error("ERROR_2_UNABLE_SAVE_TEST");
                 Menu.ShowMenu();
             }
         }
 
-        public static List<TestContent.Question> LoadTest(string testName)
+        public static List<Question> LoadTest(string testName)
         {
             try
             {
                 string json = File.ReadAllText(testName + Constants.SaveFileExtension).ToString();
-                return TestOperations.newTest = JsonConvert.DeserializeObject<List<TestContent.Question>>(json);
+                return TestOperations.newTest = JsonConvert.DeserializeObject<List<Question>>(json);
             }
             catch (Exception)
             {
-                ShowMessage.Error(7);
+                MessagesViewer.Error("ERROR_7_UNABLE_LOAD_TEST");
                 Menu.ShowMenu();
-                return new List<TestContent.Question>();
+                return new List<Question>();
             }
         }
 
@@ -44,7 +44,7 @@ namespace ConsoleAppTester__.NET_
 
             if (TxtFiles.Count < 1)
             {
-                ShowMessage.Info(2);
+                MessagesViewer.Info("INFO_2_NO_AVIABLE_TESTS");
                 Menu.ShowMenu();
             }
 

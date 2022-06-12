@@ -46,6 +46,12 @@
             newTest.Clear();
             ShowMessage.Info(9);
             string testName = Console.ReadLine();
+            if (testName == "")
+            {
+                Console.Clear();
+                ShowMessage.Error(8);
+                CreateNewTest();
+            }
 
             ShowMessage.Info(10);
             if (!int.TryParse(Console.ReadLine(), out int testQuestionsCount))
@@ -69,6 +75,14 @@
                 ShowMessage.Info(12, false);
                 Console.WriteLine(i + 1);
                 question.question = Console.ReadLine();
+
+                if (question.question == "")
+                {
+                    Console.Clear();
+                    ShowMessage.Error(8);
+                    CreateNewTest();
+                }
+
                 question.questionAnswers = new string[questionAnswersCount];
 
                 for (int j = 0; j < questionAnswersCount; j++)
@@ -76,6 +90,13 @@
                     ShowMessage.Info(13, false);
                     Console.WriteLine(j + 1);
                     question.questionAnswers[j] = Console.ReadLine();
+
+                    if (question.questionAnswers[j] == "")
+                    {
+                        Console.Clear();
+                        ShowMessage.Error(8);
+                        CreateNewTest();
+                    }
                 }
 
                 ShowMessage.Info(14);

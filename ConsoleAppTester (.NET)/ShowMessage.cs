@@ -2,7 +2,7 @@
 {
     internal class ShowMessage
     {
-        public static void Error(int code, bool line = true)
+        public static void Error(string code, bool line = true)
         {
             Styles.SetColor("Red", true);
             if (line)
@@ -16,7 +16,7 @@
             Styles.SetColor("Red", false);
         }
 
-        public static void Info(int code, bool line = true)
+        public static void Info(string code, bool line = true)
         {
             Styles.SetColor("Green", true);
             if (line)

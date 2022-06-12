@@ -6,7 +6,7 @@ namespace ConsoleAppTester__.NET_
     {
         public static void ShowMenu()
         {
-            ShowMessage.Info(0);
+            ShowMessage.Info("INFO_0_SELECT_TEST_OPERATION");
 
             ConsoleKey key = Console.ReadKey(true).Key;
 
@@ -28,7 +28,7 @@ namespace ConsoleAppTester__.NET_
 
                 default:
                     Console.Clear();
-                    ShowMessage.Error(0);
+                    ShowMessage.Error("ERROR_0_WRONG_KEY");
                     ShowMenu();
                     break;
             }
